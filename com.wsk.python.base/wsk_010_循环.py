@@ -5,7 +5,7 @@ from __future__ import print_function
 1. 循环使用的是while语法
 2. 计算赋值可以简写，在基本的运算符+ - * / // % 后面加一个=即可
 3. break破除循环、continue结束本次循环
-4. for循环是对列表、元组等集合的迭代循环
+4. for循环是对字符串、列表、元组、字典等容器的迭代循环
 """
 
 result = 0
