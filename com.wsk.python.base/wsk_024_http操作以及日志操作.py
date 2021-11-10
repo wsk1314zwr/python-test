@@ -8,7 +8,8 @@ logger = logging.getLogger(__name__)
 
 def main():
     http = urllib3.PoolManager(num_pools=5, headers={'appCode': 'datarkworker'})
-    resp = http.request('GET', 'http://datark-manage-pc.servyou-release.devops.91lyd.com/datark/api/meta/get-hive-analyze-tables')
+    resp = http.request('GET', 'http://datark-manage-pc.servyou-release.devops.91lyd.com/datark/api/meta/get-hive'
+                               '-analyze-tables')
     data = json.loads(resp.data.decode('utf8'))
     resp.release_conn()
     status = data['head']['status']
