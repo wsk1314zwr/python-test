@@ -44,3 +44,10 @@ for name in name_list:  # 迭代循环，可以在集合结束后通过else增�
     print("我的名字是%s" % name)
 else:
     print("循环结束")
+
+h = 0
+while True:
+    h += 1
+    print("h=%d" % h)
+    if h > 10:
+        break
