@@ -17,13 +17,5 @@ package_test.sent_message.send(1)
 package_test.receive_message.receive()
 
 """ 另一种打包方式：可方便同时打包出xxx..tar.gz  xxx.whl文件
-安装打包工具：pip install --upgrade setuptools wheel build
-
-打包：python -m build
-成功后会生成：
-dist/
-├── xxx.whl
-└── xxx.tar.gz
-
-使用wheel安装测试: pip install dist/xxx.whl
+参考：/Users/skwang/Documents/workspace/workspace4/project/work_project/python-bitable/安装部署
 """
