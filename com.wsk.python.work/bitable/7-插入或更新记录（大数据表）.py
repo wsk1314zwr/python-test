@@ -26,25 +26,27 @@ if __name__ == "__main__":
     # 1. 构造参数
     param1 = UpsertRecordsParam(
         table_id="tvvTycVXgvv",
-        firstBatch=False,
+        firstBatch=True,
+        lastBatch=False,
         records=[
             CreateRecordBody(fields={"f42jly257guti": 88008, "id": "我来自于北京11"}),  # 未指定 rowId 则是插入
             CreateRecordBody(rowId="rec_xxx", fields={"f42jly257guti": 99008, "id": "我来自于上海22"})  # 指定 rowId 即更新
         ]
     )
-    # 2. 调用
+    # 2. 第一次调用
     client.upsert_records(param1)
     print("第一批upsert全部成功")
     # 3. 构造参数
     param2 = UpsertRecordsParam(
         table_id="tvvTycVXgvv",
+        firstBatch=False,
         lastBatch=True,
         records=[
             CreateRecordBody(fields={"f42jly257guti": 88008, "id": "我来自于北京11"}),  # 未指定 rowId 则是插入
             CreateRecordBody(rowId="rec_xxx", fields={"f42jly257guti": 99008, "id": "我来自于上海22"})  # 指定 rowId 即更新
         ]
     )
-    # 4. 调用
+    # 4. 最后一次调用
     client.upsert_records(param2)
     print("第二批upsert全部成功")
 
