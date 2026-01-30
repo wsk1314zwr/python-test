@@ -21,6 +21,7 @@ if __name__ == "__main__":
     bitable_server_local = "http://127.0.0.1:8080/bitable"
     _set_global_context(base_id="appvfzEuWsubV")
     _set_global_context(bitable_url=bitable_server_local)
+    _set_global_context(operator_id="20250928001053710024010000094")
 
     client = BitableClient()
     # 1. 构造参数
